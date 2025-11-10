@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hkml"
+version = "0.1.0"
+description = "Minimal, reproducible backtesting demo: equal-weight baseline vs Top-K strategy (DuckDB + pandas)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Your Name"}]
+dependencies = [
+  "duckdb>=0.9.2",
+  "pandas>=1.5",
+  "numpy>=1.23",
+  "matplotlib>=3.7"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7",
+  "ruff>=0.5.0",
+  "black>=23.0"
+]
+
+[project.scripts]
+hkml = "hkml.simple_cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["hkml*"]

@@ -1,0 +1,43 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+.cache/
+.mypy_cache/
+.pytest_cache/
+
+# --- Virtual environments & env files ---
+.venv/
+venv/
+env/
+.env
+.secrets.*
+
+# --- Jupyter/VSCode ---
+.ipynb_checkpoints/
+.vscode/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Project data & outputs (keep repo light/reproducible) ---
+data/
+outputs*/
+results/
+figs/
+*.duckdb
+*.parquet
+*.feather
+*.csv
+
+# --- Logs & tmp ---
+*.log
+tmp/
